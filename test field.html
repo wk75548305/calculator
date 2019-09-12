@@ -1,12 +1,22 @@
 <html>
 	<head>
 		<title>test field</title>
-		
+		<style>
+			
+		</style>
 	</head>
 	
 	<body>
-		<table border="black">
-		<thead><tr><td></td><td>Monday</td><td>tue</td><td>wed</td><td>thu</td><td>fri</td></tr></thead>
-		<tbody></tbody>
-		</table>
+		<form method="post" action="inputs.php">
+			<label for="textinput">Text Input</label>
+			<input type="text" id="textinput" name="name" /><p></p>
+			<label for="textareainput">Your life story</label>
+			<textarea name="story" id="textareainput" cols="30" rows="10"></textarea><p></p>
+			<label for="radioinput">Age</label>
+			<input type="radio" id="radioinput" name="age">10~20
+			<input type="radio" id="radioinput" name="age">20~30 
+			<input type="radio" id="radioinput" name="age">40~50 
+			<input type="radio" id="radioinput" name="age">60~70 
+		</form>
 	</body>
+</html>
