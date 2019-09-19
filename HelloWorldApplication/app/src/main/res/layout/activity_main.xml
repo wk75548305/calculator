@@ -7,7 +7,7 @@
     tools:context="com.chuhai.helloworldapplication.MainActivity">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/theleftbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
@@ -15,15 +15,15 @@
         android:text="Button" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/scores"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="TextView" />
+        android:text="score" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/therightbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
