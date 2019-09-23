@@ -1,0 +1,22 @@
+body {font-family: 'Mansalva', cursive;}
+
+.banner {
+		background-color: aquamarine;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		}
+footer 
+		{background-color: blue}
+input[class='search'] 
+		{ width: 200px; height: 30px;}
+
+.books {
+	margin: auto;
+	border: solid 10px red;
+}
+
+.red {
+	border: red solid 2px;
+	background-color: pink;
+}
