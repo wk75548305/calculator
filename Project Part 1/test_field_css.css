@@ -6,8 +6,14 @@ body {font-family: 'Mansalva', cursive;}
 		margin-left: auto;
 		margin-right: auto;
 		}
-footer 
-		{background-color: blue}
+.footer 
+		{
+		background-color: goldenrod;
+		border:red solid 5px;
+		border-radius: 5px;
+		height: 60px;
+		width: 400px;
+}
 input[class='search'] 
 		{ width: 200px; height: 30px;}
 
@@ -16,7 +22,25 @@ input[class='search']
 	border: solid 10px red;
 }
 
-.red {
-	border: red solid 2px;
+longboxs {
+	border: green solid 2px;
 	background-color: pink;
+	width: 100%;
+	height: 30px;
+	margin-left: 20px;
+	display:inline-block;
+}
+
+shortboxs {
+	border: green solid 2px;
+	background-color: pink;
+	width: 43%;
+	height: 30px;
+	margin-left: 20px;
+	display:inline-block;
+}
+
+name {
+	font-family: 'Notable', sans-serif;
+	font-size: 10px
 }
