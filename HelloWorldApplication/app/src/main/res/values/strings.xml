@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">HelloWorldApplication</string>
+
+    <string name="namelist">what yr name</string>
+    <string-array name="names">
+        <item>mic</item>
+        <item>james</item>
+        <item>steve</item>
+        <item>roy</item>
+    </string-array>
 </resources>
