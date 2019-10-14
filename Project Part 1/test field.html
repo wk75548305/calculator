@@ -6,6 +6,20 @@
 		<link rel="stylesheet" type="text/css" href="test_field_css.css" >
 		<title>book store</title>
 		
+		<script>
+			var imagearr=["image/magazines/1_large.jpg","image/magazines/2_large.jpg","image/magazines/3_large.jpg"];
+			var currentindex=0;
+			var size = 3;
+			
+			function changeimage(){
+				var imgele = document.getElementById("rollingbanner");
+				currentindex++;
+				currentindex = currentindex % size;
+				imgele.src = imagearr[currentindex];
+				
+			}
+		</script>
+		
 	</head>
 	
 	<body>
@@ -13,8 +27,10 @@
 		
 		
 	<main>
-		<div class="banner">
+		<div id="banner">
 	<header>
+		<img src="image/magazines/1_large.jpg" id="rollingbanner" alt="asd">
+		<input type="button" onClick="changeimage()">
 			<img src="image/icons/logo.png" alt="logo" />
 			<input type="text" placeholder="Search" class="search"/>
 			<img src="image/icons/icon_wishlist.png" alt="wihlist"/>
@@ -23,15 +39,15 @@
 		</header>
 		</div>
 		
- 	  <div class="books">
+ 	  <div id="books">
 		<red>A</red> asdasdadasdasfhyfybhbujbyrsj
 		</div>
 		
-		<div class="footer">
+		<div>
 		<img src="image/icons/icon_wishlist.png" alt="babarakuko" style="float: left;width: 50px;margin-left: 5px;margin-right: 5px;margin-top: 5px;" >
 		
 		<name>babarakuko desu</name>
-		<br>no money no talk <br></br>
+		<br>no money no talk
 		
 		<longboxs>1</longboxs> <br> <shortboxs>2</shortboxs> <shortboxs>3</shortboxs> <br> <longboxs>4</longboxs>
 		
