@@ -1,13 +1,11 @@
 body {font-family: 'Mansalva', cursive;}
 
-.banner {
-		background-color: aquamarine;
-		text-align: center;
-		margin-left: auto;
-		margin-right: auto;
-		justify-content: center;
+#banner {
+		display: flex;
+		background-color: white;
+		justify-content: space-around;
 		}
-.footer 
+#footer 
 		{
 		background-color: goldenrod;
 		border:red solid 5px;
@@ -16,9 +14,13 @@ body {font-family: 'Mansalva', cursive;}
 		width: 400px;
 }
 input[class='search'] 
-		{ width: 200px; height: 30px;}
+		{ 
+		width: 400px;
+		height: 30px;
+		border-radius: 15px;
+}
 
-.books {
+#books {
 	margin: auto;
 	border: solid 10px red;
 }
