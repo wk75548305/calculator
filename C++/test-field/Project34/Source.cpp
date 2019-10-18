@@ -9,7 +9,7 @@ int main();
 int main() {
 	List *list = new List();
 	Node *array[7];
-	string d[7] = { "ab","bc","cd","de","ef","fg","gh"};
+	string d[7] = { "aasdz","badd","bcgsdhd","defk","feav","fdsfg","ffddsf"};
 	string x;
 
 	for (int i = 0; i < 7; i++) {
@@ -19,8 +19,9 @@ int main() {
 
 	list->printallcontent();
 
-	x = list->search(4);
-	cout << x  << endl;
+	cin >> x;
+
+	list->sorting(x);
 
 	system("pause");
 	return 0;
