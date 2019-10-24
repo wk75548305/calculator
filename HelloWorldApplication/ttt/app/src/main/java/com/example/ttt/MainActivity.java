@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         player1score = findViewById(R.id.player1score);
         player2score = findViewById(R.id.player2score);
 
-        nice = MediaPlayer.create(MainActivity.this, R.raw.nice);
+        nice = MediaPlayer.create(MainActivity.this, R.raw.kongoushit);
         stopit = MediaPlayer.create(MainActivity.this, R.raw.stopit);
         headshot = MediaPlayer.create(MainActivity.this, R.raw.headshot);
         succ = MediaPlayer.create(MainActivity.this, R.raw.succ);
@@ -102,14 +102,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             player1pt++;
             Toast.makeText(getApplicationContext(),"Player1Wins",Toast.LENGTH_SHORT).show();
             player1score.setText("Player 1 Score:" + player1pt);
-            succ.start();
         }else{
-            nice.start();
             player2pt++;
             Toast.makeText(getApplicationContext(),"Player2Wins",Toast.LENGTH_SHORT).show();
             player2score.setText("Player 2 Score:" + player2pt);
         }
-
+        succ.start();
         reset(0);
     }
 
@@ -181,6 +179,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void draw(){
         Toast.makeText(getApplicationContext(),"Draw",Toast.LENGTH_SHORT).show();
+        nice.start();
         reset(0);
     }
 
