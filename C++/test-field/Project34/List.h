@@ -67,53 +67,73 @@ string List::search(int target) {
 
 void List::sorting(string s) {
 	Node *here = head;
-	if (s == "SID") {
-		for (int i = 0; i < 7; i++) {
-			 do{
-				 if (here->next != NULL) {
-					 if (here->SID < here->next->SID) {
-						 if (here->prev = NULL) {
+	Node *nextnext = new Node();
+	Node *prev = new Node();
+	int flag = 0;
 
-						 }
-					 }
-				 }
-				here = here->next;
-			 } while (here != NULL);
-			here = head;
-		}
-		do
-		{
-			cout << here->name << " ";
-		} while (here->next != NULL);
-	}
-	else if (s == "GPA")
+	while (here->next != NULL && flag != 7)
 	{
-		for (int i = 0; i < 7; i++) {
-			do {
-				if (here->GPA < here->next->GPA || here->next != NULL) {
-					if (here->prev != NULL)
-					{
-						here->prev->next = here->next;
-					}
-					here->next = here->next->next;
-					here->next->prev->next = here;
+ 		if (s == "SID") {
+			if (here->prev == NULL && here->SID < here->next->SID) {
+				here->next = here->next->next;
+				here->prev = here->next->prev;
+				here->prev->next = here;
+				here->next->prev = here;
+
+				here->prev->prev = NULL;
+				this->head = here->prev;
+			}
+			else if (here->next->next == NULL) {
+				if (here->SID < here->next->SID) {
+					here->prev->next = here->next;
+					here->prev->next->next = here;
+					here->prev->next->prev = here->prev;
+					here->prev = here->prev->next;
+
+					this->tail = here;
+					here->next = NULL;
 				}
+				else {
+					here->prev->next;
+					flag++;
+				}
+				here->next->next - NULL;
+				here = this->head;	
+			}
+				
+			else if (here->SID < here->next->SID) {
+				nextnext = here->next->next;
+				prev = here->prev;
+
+				prev->next = here->next;
+				here->next->next = here;
+				here->next = nextnext;
+				nextnext->prev = here;
+				here->prev = prev->next;
+				here->prev->prev = prev;
+			}
+			else
+			{
 				here = here->next;
-			} while (here != NULL);
-			here = head;
+			}
 		}
-		do
+		else if (s == "GPA")
 		{
-			cout << here->name << " ";
-		} while (here->next != NULL);
-	}
-	else if (s == "Name")
-	{
-		string names[7];
-		for (int i = 0; i < 7; i++) {
-			names[i] = here->name;
-			here = here->next;
+			for (int i = 0; i < 7; i++) {
+				do {
+					if (here->GPA < here->next->GPA || here->next != NULL) {
+						if (here->prev != NULL)
+						{
+							here->prev->next = here->next;
+						}
+						here->next = here->next->next;
+						here->next->prev->next = here;
+					}
+					here = here->next;
+				} while (here != NULL);
+				here = head;
+			}
+			
 		}
-		sort(names,names+7);
 	}
 }

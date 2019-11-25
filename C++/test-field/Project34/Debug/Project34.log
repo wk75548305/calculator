@@ -1,1 +1,3 @@
-﻿  Project34.vcxproj -> C:\Users\user\Desktop\test-field\C++\test-field\Debug\Test-Field.exe
+﻿  Source.cpp
+c:\users\pc\test-field\c++\test-field\project34\list.h(100): warning C4552: '-': 未使用運算式結果
+  Project34.vcxproj -> C:\Users\PC\test-field\C++\test-field\Debug\Test-Field.exe

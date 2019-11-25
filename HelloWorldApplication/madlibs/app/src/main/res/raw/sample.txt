@@ -1,0 +1,1 @@
+Let's try to run your <pronoun>. I assume you have connected your actual <adjectives> device with your <voice>. To run the app from the android studio, open one of your project's <noun> files and click Run  icon from the toolbar. Select your <verb> as an option and then check your mobile device which will display your default scree
