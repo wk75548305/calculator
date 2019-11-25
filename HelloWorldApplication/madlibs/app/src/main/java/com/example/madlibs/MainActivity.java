@@ -12,18 +12,20 @@ import android.widget.TextView;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button goresult;
     Button submit;
     TextView paragraph;
     int length;
-    String para,inputs;
+    String para,inputs, output;
     TextView banner;
     EditText editText;
     int occurance = 0;
@@ -70,7 +72,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onClick(View view) {
                 intentresult.putExtra("essay", para);
                 intentresult.putExtra("userinput",userinput);
-                intentresult.putExtra("length",occurance);
+                intentresult.putExtra("occurance",occurance);
+                intentresult.putExtra("output", output);
                 startActivity(intentresult);
             }
         });
@@ -84,6 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if(dummy == 0){
             submit.setVisibility(Button.GONE);
+            goresult.setVisibility(Button.VISIBLE);
         }
     }
 }
